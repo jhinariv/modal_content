@@ -1,0 +1,12 @@
+modal_content:
+  # version: 1.x
+  css:
+    theme:
+      css/styles.css: {}
+  js:
+    js/behaviors.js: {}
+    js/resize.js: {}
+  dependencies:
+      - core/jquery
+      - core/drupalSettings
+      - core/drupal.dialog.ajax

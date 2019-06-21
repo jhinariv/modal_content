@@ -1,0 +1,13 @@
+modal.content_content_controller_page:
+  path: '/modal_content/page'
+  defaults:
+    _controller: '\Drupal\modal_content\Controller\ModalContentController::page'
+    _title: 'Términos y condiciones'
+  requirements:
+    _permission: 'access content'
+modal.content_content_controller_modal:
+  path: '/modal_content/modal/{js}/{button_close}/{nid}'
+  defaults:
+    _controller: '\Drupal\modal_content\Controller\ModalContentController::modal'
+  requirements:
+    _access: 'TRUE'

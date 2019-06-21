@@ -1,0 +1,19 @@
+<div id="ctools-modal" class="popups-box modal-popup">
+  <div class="ctools-wrapper">
+    <div class="ctools-modal-content modal-popup">
+      <div class="modal-msg"></div>
+      <div class="modal-scroll">
+        <div class="modal-scroll-wrapper">
+          <div id="modal-content" class="modal-content popups-body">
+            {{ content }}
+          </div>
+        </div>
+      </div>
+      {% if button_close %}
+        <div class="modal-footer">
+          <span class="footer-popups-close primary button js-form-submit form-submit form-type-submit btn btn-default">Cerrar</span>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

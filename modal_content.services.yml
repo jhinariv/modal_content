@@ -1,0 +1,5 @@
+services:
+  modal.content:
+    class: Drupal\modal_content\ModalContentService
+    arguments: []
+

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Contains modal_content.module
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function modal_content_theme($existing, $type, $theme, $path) {
+  return [
+    'modal_content' => [
+      'variables' => [
+        'content' => NULL,
+        'button_close' => NULL,
+      ],
+      'template' => 'modal-content',
+    ],
+  ];
+}
