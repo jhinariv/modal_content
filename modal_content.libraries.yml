@@ -2,10 +2,11 @@ modal_content:
   version: 20190710
   css:
     theme:
-      css/modal_content.css: { weight: 10 }
+      css/modal_content.css: {}
   js:
     js/behaviors.js: {}
     js/resize.js: {}
+    js/style.js: {}
   dependencies:
     - core/jquery
     - core/drupalSettings

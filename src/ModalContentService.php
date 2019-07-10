@@ -91,7 +91,6 @@ class ModalContentService {
         'closeText' => '', /* Text for the «close» button */
         'loadingText' => '...', /* Text with the popup downloading */
         'animation' => 'fadeIn', /* Animation type */
-        'modalTheme' => 'tac_modal_theme', /* Name of theme to be added */
         'animationSpeed' => 'slow', /* Popup animation speed */
       ];
     }
