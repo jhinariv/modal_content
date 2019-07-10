@@ -8,19 +8,27 @@ use Drupal\Core\Controller\ControllerBase;
 use Drupal\node\Entity\Node;
 
 /**
- * Class ModalContentController.
+ * Class ModalContent.
  *
  * @package Drupal\modal_content\Controller
  */
-class ModalContentController extends ControllerBase {
+class ModalContent extends ControllerBase {
+
+  protected $config;
+
+  /**
+   * {@inheritdoc}
+   */
+  public function __construct() {
+    $this->config = \Drupal::config('modal_content.settings')->get('styles');
+  }
 
   /**
    * Page function.
    */
   public function page() {
-    $modal_content = \Drupal::service('modal.content');
-    $link = $modal_content->modalContentAdd($this->t('términos y condiciones'), '1');
-    return $link;
+    $modal = \Drupal::service('modal.content');
+    return $modal->modalContentAdd('Open Modal', 1);
   }
 
   /**
@@ -51,13 +59,13 @@ class ModalContentController extends ControllerBase {
     $theme = [
       '#theme' => 'modal_content',
       '#content' => $text,
-      '#button_close' => TRUE,
+      '#button_close' => $this->config['modal_button_close'],
     ];
     $html = render($theme);
     $content['#markup'] = $html;
     $dialog_options = [
       'dialogClass' => 'popup-dialog-class',
-      'width' => 400,
+      'width' => $this->config['modal_width'],
       'maxWidth' => 1000,
       'modal' => TRUE,
       'fluid' => TRUE,

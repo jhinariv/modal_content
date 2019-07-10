@@ -1,12 +1,12 @@
 modal_content:
-  # version: 1.x
+  version: 20190710
   css:
     theme:
-      css/styles.css: {}
+      css/modal_content.css: { weight: 10 }
   js:
     js/behaviors.js: {}
     js/resize.js: {}
   dependencies:
-      - core/jquery
-      - core/drupalSettings
-      - core/drupal.dialog.ajax
+    - core/jquery
+    - core/drupalSettings
+    - core/drupal.dialog.ajax

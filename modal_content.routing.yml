@@ -1,13 +1,24 @@
-modal.content_content_controller_page:
-  path: '/modal_content/page'
+modal.admin_settings:
+  path: '/admin/config/settings'
   defaults:
-    _controller: '\Drupal\modal_content\Controller\ModalContentController::page'
-    _title: 'Términos y condiciones'
+    _form: '\Drupal\modal_content\Form\ModalContentConfig'
+    _title: 'Modal content configuration'
+  requirements:
+    _permission: 'administer'
+  options:
+    _admin_route: TRUE
+
+modal.content_page_test:
+  path: '/modal_content/test'
+  defaults:
+    _controller: '\Drupal\modal_content\Controller\ModalContent::page'
+    _title: ''
   requirements:
     _permission: 'access content'
-modal.content_content_controller_modal:
-  path: '/modal_content/modal/{js}/{button_close}/{nid}'
+
+modal.content_page_open:
+  path: '/modal_content/{nid}'
   defaults:
-    _controller: '\Drupal\modal_content\Controller\ModalContentController::modal'
+    _controller: '\Drupal\modal_content\Controller\ModalContent::modal'
   requirements:
     _access: 'TRUE'
