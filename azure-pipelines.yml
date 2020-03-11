@@ -32,4 +32,7 @@ steps:
 - script: phpunit ModalContentTest.php
   displayName: 'Run tests with phpunit'
 
+- task: SonarQubePrepare@4
+  inputs:
+    scannerMode: 'Other'
 - task: SonarQubeAnalyze@4
