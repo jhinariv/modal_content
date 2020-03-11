@@ -1,7 +1,7 @@
 {
   "autoload": {
     "psr-4": {
-      "edco\\": "modules/edco/custom/*/src/tests"
+      "modal_content\\": ""
     }
   },
   "require-dev": {
