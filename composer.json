@@ -1,0 +1,10 @@
+{
+  "autoload": {
+    "psr-4": {
+      "edco\\": "modules/edco/custom/*/src/tests"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  }
+}
