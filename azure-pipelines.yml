@@ -34,6 +34,6 @@ steps:
 
 - task: SonarQubePrepare@4
   inputs:
-    SonarQube: ''
+    SonarQube: 'http://filandia.uniandes.edu.co:9000'
     scannerMode: 'Other'
 - task: SonarQubeAnalyze@4
