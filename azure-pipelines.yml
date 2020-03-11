@@ -28,5 +28,5 @@ steps:
 - script: composer require --dev phpunit/phpunit ^9
   displayName: 'composer require --dev phpunit/phpunit ^9'
 
-- script: phpunit
+- script: phpunit ModalContentTest.php
   displayName: 'Run tests with phpunit'
