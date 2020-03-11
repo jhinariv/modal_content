@@ -27,3 +27,6 @@ steps:
 
 - script: composer require --dev phpunit/phpunit ^9
   displayName: 'composer require --dev phpunit/phpunit ^9'
+
+- script: phpunit
+  displayName: 'Run tests with phpunit'
