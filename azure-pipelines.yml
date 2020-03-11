@@ -34,5 +34,6 @@ steps:
 
 - task: SonarQubePrepare@4
   inputs:
+    SonarQube: ''
     scannerMode: 'Other'
 - task: SonarQubeAnalyze@4
